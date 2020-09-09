@@ -1,0 +1,900 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23F529BE-521C-4B6C-9F08-DE2B2DFBCC34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Eahara.Model</RootNamespace>
+    <AssemblyName>Eahara.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Cors, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.6\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.6\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs" />
+    <Compile Include="BookingDetails.cs" />
+    <Compile Include="Booking.cs" />
+    <Compile Include="CompanyExpense.cs" />
+    <Compile Include="CompanyExpenseDetails.cs" />
+    <Compile Include="CompanyProfile.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerMMethod.cs" />
+    <Compile Include="CustomerOffer.cs" />
+    <Compile Include="DateReport.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="Enquiry.cs" />
+    <Compile Include="Expense.cs" />
+    <Compile Include="FAQ.cs" />
+    <Compile Include="Feedback.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemCategory.cs" />
+    <Compile Include="ItemImage.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="MEDBooking.cs" />
+    <Compile Include="MEDBookingDetail.cs" />
+    <Compile Include="MEDBrand.cs" />
+    <Compile Include="MEDCategory.cs" />
+    <Compile Include="MEDItem.cs" />
+    <Compile Include="MEDOffer.cs" />
+    <Compile Include="MEDShop.cs" />
+    <Compile Include="MEDStatus.cs" />
+    <Compile Include="MEDSubCategory.cs" />
+    <Compile Include="MEDUpload.cs" />
+    <Compile Include="Migrations\201810040452190_Usertable.cs" />
+    <Compile Include="Migrations\201810040452190_Usertable.Designer.cs">
+      <DependentUpon>201810040452190_Usertable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810040505003_UserSessionCreated.cs" />
+    <Compile Include="Migrations\201810040505003_UserSessionCreated.Designer.cs">
+      <DependentUpon>201810040505003_UserSessionCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810040514329_enquiryFeedbackCreated.cs" />
+    <Compile Include="Migrations\201810040514329_enquiryFeedbackCreated.Designer.cs">
+      <DependentUpon>201810040514329_enquiryFeedbackCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810040519050_BookingCreated.cs" />
+    <Compile Include="Migrations\201810040519050_BookingCreated.Designer.cs">
+      <DependentUpon>201810040519050_BookingCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810040528401_ShopItemCategoryCreated.cs" />
+    <Compile Include="Migrations\201810040528401_ShopItemCategoryCreated.Designer.cs">
+      <DependentUpon>201810040528401_ShopItemCategoryCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810040541494_ShopItemCreated.cs" />
+    <Compile Include="Migrations\201810040541494_ShopItemCreated.Designer.cs">
+      <DependentUpon>201810040541494_ShopItemCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810040554400_ShopInfoMenuCreated.cs" />
+    <Compile Include="Migrations\201810040554400_ShopInfoMenuCreated.Designer.cs">
+      <DependentUpon>201810040554400_ShopInfoMenuCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810040600358_ShopItemImagesCreated.cs" />
+    <Compile Include="Migrations\201810040600358_ShopItemImagesCreated.Designer.cs">
+      <DependentUpon>201810040600358_ShopItemImagesCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810040616083_ReviewCreated.cs" />
+    <Compile Include="Migrations\201810040616083_ReviewCreated.Designer.cs">
+      <DependentUpon>201810040616083_ReviewCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810040647593_ItemChanged.cs" />
+    <Compile Include="Migrations\201810040647593_ItemChanged.Designer.cs">
+      <DependentUpon>201810040647593_ItemChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810040653014_BookingChanged.cs" />
+    <Compile Include="Migrations\201810040653014_BookingChanged.Designer.cs">
+      <DependentUpon>201810040653014_BookingChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810050905185_OfferTableCreated.cs" />
+    <Compile Include="Migrations\201810050905185_OfferTableCreated.Designer.cs">
+      <DependentUpon>201810050905185_OfferTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810081214311_Itemchange.cs" />
+    <Compile Include="Migrations\201810081214311_Itemchange.Designer.cs">
+      <DependentUpon>201810081214311_Itemchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810090507416_ShopCategoryId.cs" />
+    <Compile Include="Migrations\201810090507416_ShopCategoryId.Designer.cs">
+      <DependentUpon>201810090507416_ShopCategoryId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810090826377_shmnaepty.cs" />
+    <Compile Include="Migrations\201810090826377_shmnaepty.Designer.cs">
+      <DependentUpon>201810090826377_shmnaepty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810090921149_ItemCategoryModified.cs" />
+    <Compile Include="Migrations\201810090921149_ItemCategoryModified.Designer.cs">
+      <DependentUpon>201810090921149_ItemCategoryModified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810090940056_ItemCategoryCancel.cs" />
+    <Compile Include="Migrations\201810090940056_ItemCategoryCancel.Designer.cs">
+      <DependentUpon>201810090940056_ItemCategoryCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810101217137_SubscriptionCreated.cs" />
+    <Compile Include="Migrations\201810101217137_SubscriptionCreated.Designer.cs">
+      <DependentUpon>201810101217137_SubscriptionCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810110507122_CompanyProfile.cs" />
+    <Compile Include="Migrations\201810110507122_CompanyProfile.Designer.cs">
+      <DependentUpon>201810110507122_CompanyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810110528282_jishnuemp111018.cs" />
+    <Compile Include="Migrations\201810110528282_jishnuemp111018.Designer.cs">
+      <DependentUpon>201810110528282_jishnuemp111018.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810110536502_NotificationCreated.cs" />
+    <Compile Include="Migrations\201810110536502_NotificationCreated.Designer.cs">
+      <DependentUpon>201810110536502_NotificationCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810110552363_TraceNoCreated.cs" />
+    <Compile Include="Migrations\201810110552363_TraceNoCreated.Designer.cs">
+      <DependentUpon>201810110552363_TraceNoCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810110601323_PartnerCreated.cs" />
+    <Compile Include="Migrations\201810110601323_PartnerCreated.Designer.cs">
+      <DependentUpon>201810110601323_PartnerCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810110536588_CompanyProfile1.cs" />
+    <Compile Include="Migrations\201810110536588_CompanyProfile1.Designer.cs">
+      <DependentUpon>201810110536588_CompanyProfile1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810110927539_jishnuemp1110182.cs" />
+    <Compile Include="Migrations\201810110927539_jishnuemp1110182.Designer.cs">
+      <DependentUpon>201810110927539_jishnuemp1110182.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810111100042_FAQCreated.cs" />
+    <Compile Include="Migrations\201810111100042_FAQCreated.Designer.cs">
+      <DependentUpon>201810111100042_FAQCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810111118107_LocationCreated.cs" />
+    <Compile Include="Migrations\201810111118107_LocationCreated.Designer.cs">
+      <DependentUpon>201810111118107_LocationCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810120538339_TagCreated.cs" />
+    <Compile Include="Migrations\201810120538339_TagCreated.Designer.cs">
+      <DependentUpon>201810120538339_TagCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810120819209_LocationInSetting.cs" />
+    <Compile Include="Migrations\201810120819209_LocationInSetting.Designer.cs">
+      <DependentUpon>201810120819209_LocationInSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810130616483_BookindDetailsCreated.cs" />
+    <Compile Include="Migrations\201810130616483_BookindDetailsCreated.Designer.cs">
+      <DependentUpon>201810130616483_BookindDetailsCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810130630131_13102018empty.cs" />
+    <Compile Include="Migrations\201810130630131_13102018empty.Designer.cs">
+      <DependentUpon>201810130630131_13102018empty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810130633082_13102018empty1.cs" />
+    <Compile Include="Migrations\201810130633082_13102018empty1.Designer.cs">
+      <DependentUpon>201810130633082_13102018empty1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810130724486_ReviewEdit.cs" />
+    <Compile Include="Migrations\201810130724486_ReviewEdit.Designer.cs">
+      <DependentUpon>201810130724486_ReviewEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810130900359_13102010empty2.cs" />
+    <Compile Include="Migrations\201810130900359_13102010empty2.Designer.cs">
+      <DependentUpon>201810130900359_13102010empty2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810130917342_13102010empty3.cs" />
+    <Compile Include="Migrations\201810130917342_13102010empty3.Designer.cs">
+      <DependentUpon>201810130917342_13102010empty3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810131031291_an131018.cs" />
+    <Compile Include="Migrations\201810131031291_an131018.Designer.cs">
+      <DependentUpon>201810131031291_an131018.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810131203568_BookEdit123.cs" />
+    <Compile Include="Migrations\201810131203568_BookEdit123.Designer.cs">
+      <DependentUpon>201810131203568_BookEdit123.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810150522169_BookingChanged1.cs" />
+    <Compile Include="Migrations\201810150522169_BookingChanged1.Designer.cs">
+      <DependentUpon>201810150522169_BookingChanged1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810150547291_BookingChanged2.cs" />
+    <Compile Include="Migrations\201810150547291_BookingChanged2.Designer.cs">
+      <DependentUpon>201810150547291_BookingChanged2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810150551073_ShopChanged.cs" />
+    <Compile Include="Migrations\201810150551073_ShopChanged.Designer.cs">
+      <DependentUpon>201810150551073_ShopChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810151227301_bookingDetShop.cs" />
+    <Compile Include="Migrations\201810151227301_bookingDetShop.Designer.cs">
+      <DependentUpon>201810151227301_bookingDetShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810200959204_shopPreference.cs" />
+    <Compile Include="Migrations\201810200959204_shopPreference.Designer.cs">
+      <DependentUpon>201810200959204_shopPreference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810221416473_OdderIdInItem.cs" />
+    <Compile Include="Migrations\201810221416473_OdderIdInItem.Designer.cs">
+      <DependentUpon>201810221416473_OdderIdInItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810221440218_Offer%25.cs" />
+    <Compile Include="Migrations\201810221440218_Offer%25.Designer.cs">
+      <DependentUpon>201810221440218_Offer%25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810241019112_EmployeeCreated.cs" />
+    <Compile Include="Migrations\201810241019112_EmployeeCreated.Designer.cs">
+      <DependentUpon>201810241019112_EmployeeCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810260828070_DeviceTbk.cs" />
+    <Compile Include="Migrations\201810260828070_DeviceTbk.Designer.cs">
+      <DependentUpon>201810260828070_DeviceTbk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810301908476_PromoOffer.cs" />
+    <Compile Include="Migrations\201810301908476_PromoOffer.Designer.cs">
+      <DependentUpon>201810301908476_PromoOffer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810310647490_userchangecreated.cs" />
+    <Compile Include="Migrations\201810310647490_userchangecreated.Designer.cs">
+      <DependentUpon>201810310647490_userchangecreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811020610279_CustomerCreated.cs" />
+    <Compile Include="Migrations\201811020610279_CustomerCreated.Designer.cs">
+      <DependentUpon>201811020610279_CustomerCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811020630077_changescreated.cs" />
+    <Compile Include="Migrations\201811020630077_changescreated.Designer.cs">
+      <DependentUpon>201811020630077_changescreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811020721377_changescreated12.cs" />
+    <Compile Include="Migrations\201811020721377_changescreated12.Designer.cs">
+      <DependentUpon>201811020721377_changescreated12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811030624301_count.cs" />
+    <Compile Include="Migrations\201811030624301_count.Designer.cs">
+      <DependentUpon>201811030624301_count.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811030704447_Statusinbooking.cs" />
+    <Compile Include="Migrations\201811030704447_Statusinbooking.Designer.cs">
+      <DependentUpon>201811030704447_Statusinbooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811030732137_CustomerInBookind.cs" />
+    <Compile Include="Migrations\201811030732137_CustomerInBookind.Designer.cs">
+      <DependentUpon>201811030732137_CustomerInBookind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811061731138_CustomerOffers.cs" />
+    <Compile Include="Migrations\201811061731138_CustomerOffers.Designer.cs">
+      <DependentUpon>201811061731138_CustomerOffers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811061842094_CustomerOffersBook.cs" />
+    <Compile Include="Migrations\201811061842094_CustomerOffersBook.Designer.cs">
+      <DependentUpon>201811061842094_CustomerOffersBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811061938063_NewBookFields.cs" />
+    <Compile Include="Migrations\201811061938063_NewBookFields.Designer.cs">
+      <DependentUpon>201811061938063_NewBookFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811101052581_sharetext.cs" />
+    <Compile Include="Migrations\201811101052581_sharetext.Designer.cs">
+      <DependentUpon>201811101052581_sharetext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811101116291_Status.cs" />
+    <Compile Include="Migrations\201811101116291_Status.Designer.cs">
+      <DependentUpon>201811101116291_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811110742049_shopno.cs" />
+    <Compile Include="Migrations\201811110742049_shopno.Designer.cs">
+      <DependentUpon>201811110742049_shopno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811140653378_shopchange.cs" />
+    <Compile Include="Migrations\201811140653378_shopchange.Designer.cs">
+      <DependentUpon>201811140653378_shopchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811151005035_ItemChanged1.cs" />
+    <Compile Include="Migrations\201811151005035_ItemChanged1.Designer.cs">
+      <DependentUpon>201811151005035_ItemChanged1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811150554572_BookingNewVals.cs" />
+    <Compile Include="Migrations\201811150554572_BookingNewVals.Designer.cs">
+      <DependentUpon>201811150554572_BookingNewVals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811151309563_testtemp.cs" />
+    <Compile Include="Migrations\201811151309563_testtemp.Designer.cs">
+      <DependentUpon>201811151309563_testtemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811160613538_OfferIsPer.cs" />
+    <Compile Include="Migrations\201811160613538_OfferIsPer.Designer.cs">
+      <DependentUpon>201811160613538_OfferIsPer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811160944369_CancelRemarks.cs" />
+    <Compile Include="Migrations\201811160944369_CancelRemarks.Designer.cs">
+      <DependentUpon>201811160944369_CancelRemarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811170243501_Address.cs" />
+    <Compile Include="Migrations\201811170243501_Address.Designer.cs">
+      <DependentUpon>201811170243501_Address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811170313509_Address2.cs" />
+    <Compile Include="Migrations\201811170313509_Address2.Designer.cs">
+      <DependentUpon>201811170313509_Address2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811170923100_ItemPreference.cs" />
+    <Compile Include="Migrations\201811170923100_ItemPreference.Designer.cs">
+      <DependentUpon>201811170923100_ItemPreference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811200536180_statusinBooking2.cs" />
+    <Compile Include="Migrations\201811200536180_statusinBooking2.Designer.cs">
+      <DependentUpon>201811200536180_statusinBooking2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811200613217_CancelRemarks1.cs" />
+    <Compile Include="Migrations\201811200613217_CancelRemarks1.Designer.cs">
+      <DependentUpon>201811200613217_CancelRemarks1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811271731011_maxvaluepromo.cs" />
+    <Compile Include="Migrations\201811271731011_maxvaluepromo.Designer.cs">
+      <DependentUpon>201811271731011_maxvaluepromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811271909483_Order.cs" />
+    <Compile Include="Migrations\201811271909483_Order.Designer.cs">
+      <DependentUpon>201811271909483_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811300951581_MobileNo3Shop.cs" />
+    <Compile Include="Migrations\201811300951581_MobileNo3Shop.Designer.cs">
+      <DependentUpon>201811300951581_MobileNo3Shop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812080925512_changed.cs" />
+    <Compile Include="Migrations\201812080925512_changed.Designer.cs">
+      <DependentUpon>201812080925512_changed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812090844541_PriorityItemCat.cs" />
+    <Compile Include="Migrations\201812090844541_PriorityItemCat.Designer.cs">
+      <DependentUpon>201812090844541_PriorityItemCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812100722536_IsPaidBooking.cs" />
+    <Compile Include="Migrations\201812100722536_IsPaidBooking.Designer.cs">
+      <DependentUpon>201812100722536_IsPaidBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812110453157_CommissionPercentage.cs" />
+    <Compile Include="Migrations\201812110453157_CommissionPercentage.Designer.cs">
+      <DependentUpon>201812110453157_CommissionPercentage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812110513374_BookingPoints.cs" />
+    <Compile Include="Migrations\201812110513374_BookingPoints.Designer.cs">
+      <DependentUpon>201812110513374_BookingPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812180518559_CusWalletBooking.cs" />
+    <Compile Include="Migrations\201812180518559_CusWalletBooking.Designer.cs">
+      <DependentUpon>201812180518559_CusWalletBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812180920207_Reports.cs" />
+    <Compile Include="Migrations\201812180920207_Reports.Designer.cs">
+      <DependentUpon>201812180920207_Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812201021448_WalletLimit.cs" />
+    <Compile Include="Migrations\201812201021448_WalletLimit.Designer.cs">
+      <DependentUpon>201812201021448_WalletLimit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901080759027_empInBooking.cs" />
+    <Compile Include="Migrations\201901080759027_empInBooking.Designer.cs">
+      <DependentUpon>201901080759027_empInBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901181220092_MEDCreated.cs" />
+    <Compile Include="Migrations\201901181220092_MEDCreated.Designer.cs">
+      <DependentUpon>201901181220092_MEDCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901181239531_MEDBookingUploadCreated.cs" />
+    <Compile Include="Migrations\201901181239531_MEDBookingUploadCreated.Designer.cs">
+      <DependentUpon>201901181239531_MEDBookingUploadCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901210507441_ItemChanged2.cs" />
+    <Compile Include="Migrations\201901210507441_ItemChanged2.Designer.cs">
+      <DependentUpon>201901210507441_ItemChanged2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901200819167_mededit.cs" />
+    <Compile Include="Migrations\201901200819167_mededit.Designer.cs">
+      <DependentUpon>201901200819167_mededit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901210603078_empty21-1-2018.cs" />
+    <Compile Include="Migrations\201901210603078_empty21-1-2018.Designer.cs">
+      <DependentUpon>201901210603078_empty21-1-2018.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901210636424_locupModified.cs" />
+    <Compile Include="Migrations\201901210636424_locupModified.Designer.cs">
+      <DependentUpon>201901210636424_locupModified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901210753445_empty21012019.cs" />
+    <Compile Include="Migrations\201901210753445_empty21012019.Designer.cs">
+      <DependentUpon>201901210753445_empty21012019.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901210915517_MEDBrandCreated.cs" />
+    <Compile Include="Migrations\201901210915517_MEDBrandCreated.Designer.cs">
+      <DependentUpon>201901210915517_MEDBrandCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901210931008_AddMEDBrandItemCreated.cs" />
+    <Compile Include="Migrations\201901210931008_AddMEDBrandItemCreated.Designer.cs">
+      <DependentUpon>201901210931008_AddMEDBrandItemCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901210801117_empty9870.cs" />
+    <Compile Include="Migrations\201901210801117_empty9870.Designer.cs">
+      <DependentUpon>201901210801117_empty9870.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901210950292_21012019Created.cs" />
+    <Compile Include="Migrations\201901210950292_21012019Created.Designer.cs">
+      <DependentUpon>201901210950292_21012019Created.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901211111195_21012019Changed.cs" />
+    <Compile Include="Migrations\201901211111195_21012019Changed.Designer.cs">
+      <DependentUpon>201901211111195_21012019Changed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901220529530_MEDUploadChanged.cs" />
+    <Compile Include="Migrations\201901220529530_MEDUploadChanged.Designer.cs">
+      <DependentUpon>201901220529530_MEDUploadChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901281953433_MEDShop.cs" />
+    <Compile Include="Migrations\201901281953433_MEDShop.Designer.cs">
+      <DependentUpon>201901281953433_MEDShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902041204014_CompanyExpense.cs" />
+    <Compile Include="Migrations\201902041204014_CompanyExpense.Designer.cs">
+      <DependentUpon>201902041204014_CompanyExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902050827238_PaymentMode.cs" />
+    <Compile Include="Migrations\201902050827238_PaymentMode.Designer.cs">
+      <DependentUpon>201902050827238_PaymentMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902061023037_ExpenseMaster.cs" />
+    <Compile Include="Migrations\201902061023037_ExpenseMaster.Designer.cs">
+      <DependentUpon>201902061023037_ExpenseMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903070738337_MMethodAdded.cs" />
+    <Compile Include="Migrations\201903070738337_MMethodAdded.Designer.cs">
+      <DependentUpon>201903070738337_MMethodAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903070946181_CustomerMMethodAdded.cs" />
+    <Compile Include="Migrations\201903070946181_CustomerMMethodAdded.Designer.cs">
+      <DependentUpon>201903070946181_CustomerMMethodAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903091046523_MedShopUser.cs" />
+    <Compile Include="Migrations\201903091046523_MedShopUser.Designer.cs">
+      <DependentUpon>201903091046523_MedShopUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903091254514_MEDShopInBookingDetail.cs" />
+    <Compile Include="Migrations\201903091254514_MEDShopInBookingDetail.Designer.cs">
+      <DependentUpon>201903091254514_MEDShopInBookingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904040606580_uploadmoreimgs.cs" />
+    <Compile Include="Migrations\201904040606580_uploadmoreimgs.Designer.cs">
+      <DependentUpon>201904040606580_uploadmoreimgs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904170638496_LocationIntegrationShop.cs" />
+    <Compile Include="Migrations\201904170638496_LocationIntegrationShop.Designer.cs">
+      <DependentUpon>201904170638496_LocationIntegrationShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904171107343_NewDatesInBooking.cs" />
+    <Compile Include="Migrations\201904171107343_NewDatesInBooking.Designer.cs">
+      <DependentUpon>201904171107343_NewDatesInBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904171141391_NewDatesInMEDBooking.cs" />
+    <Compile Include="Migrations\201904171141391_NewDatesInMEDBooking.Designer.cs">
+      <DependentUpon>201904171141391_NewDatesInMEDBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904250743354_DateTable.cs" />
+    <Compile Include="Migrations\201904250743354_DateTable.Designer.cs">
+      <DependentUpon>201904250743354_DateTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905121653028_blacklist.cs" />
+    <Compile Include="Migrations\201905121653028_blacklist.Designer.cs">
+      <DependentUpon>201905121653028_blacklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MMethod.cs" />
+    <Compile Include="Notification.cs" />
+    <Compile Include="Offer.cs" />
+    <Compile Include="Partner.cs" />
+    <Compile Include="PaymentMode.cs" />
+    <Compile Include="PromoOffer.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="Review.cs" />
+    <Compile Include="Shop.cs" />
+    <Compile Include="ShopCategory.cs" />
+    <Compile Include="ShopImage.cs" />
+    <Compile Include="ShopInfo.cs" />
+    <Compile Include="ShopMenu.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="Subscription.cs" />
+    <Compile Include="Tag.cs" />
+    <Compile Include="TraceNo.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="EAharaDB.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserOTP.cs" />
+    <Compile Include="UserSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810040452190_Usertable.resx">
+      <DependentUpon>201810040452190_Usertable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810040505003_UserSessionCreated.resx">
+      <DependentUpon>201810040505003_UserSessionCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810040514329_enquiryFeedbackCreated.resx">
+      <DependentUpon>201810040514329_enquiryFeedbackCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810040519050_BookingCreated.resx">
+      <DependentUpon>201810040519050_BookingCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810040528401_ShopItemCategoryCreated.resx">
+      <DependentUpon>201810040528401_ShopItemCategoryCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810040541494_ShopItemCreated.resx">
+      <DependentUpon>201810040541494_ShopItemCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810040554400_ShopInfoMenuCreated.resx">
+      <DependentUpon>201810040554400_ShopInfoMenuCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810040600358_ShopItemImagesCreated.resx">
+      <DependentUpon>201810040600358_ShopItemImagesCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810040616083_ReviewCreated.resx">
+      <DependentUpon>201810040616083_ReviewCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810040647593_ItemChanged.resx">
+      <DependentUpon>201810040647593_ItemChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810040653014_BookingChanged.resx">
+      <DependentUpon>201810040653014_BookingChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810050905185_OfferTableCreated.resx">
+      <DependentUpon>201810050905185_OfferTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810081214311_Itemchange.resx">
+      <DependentUpon>201810081214311_Itemchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810090507416_ShopCategoryId.resx">
+      <DependentUpon>201810090507416_ShopCategoryId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810090826377_shmnaepty.resx">
+      <DependentUpon>201810090826377_shmnaepty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810090921149_ItemCategoryModified.resx">
+      <DependentUpon>201810090921149_ItemCategoryModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810090940056_ItemCategoryCancel.resx">
+      <DependentUpon>201810090940056_ItemCategoryCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810101217137_SubscriptionCreated.resx">
+      <DependentUpon>201810101217137_SubscriptionCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810110507122_CompanyProfile.resx">
+      <DependentUpon>201810110507122_CompanyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810110528282_jishnuemp111018.resx">
+      <DependentUpon>201810110528282_jishnuemp111018.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810110536502_NotificationCreated.resx">
+      <DependentUpon>201810110536502_NotificationCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810110552363_TraceNoCreated.resx">
+      <DependentUpon>201810110552363_TraceNoCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810110601323_PartnerCreated.resx">
+      <DependentUpon>201810110601323_PartnerCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810110536588_CompanyProfile1.resx">
+      <DependentUpon>201810110536588_CompanyProfile1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810110927539_jishnuemp1110182.resx">
+      <DependentUpon>201810110927539_jishnuemp1110182.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810111100042_FAQCreated.resx">
+      <DependentUpon>201810111100042_FAQCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810111118107_LocationCreated.resx">
+      <DependentUpon>201810111118107_LocationCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810120538339_TagCreated.resx">
+      <DependentUpon>201810120538339_TagCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810120819209_LocationInSetting.resx">
+      <DependentUpon>201810120819209_LocationInSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810130616483_BookindDetailsCreated.resx">
+      <DependentUpon>201810130616483_BookindDetailsCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810130630131_13102018empty.resx">
+      <DependentUpon>201810130630131_13102018empty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810130633082_13102018empty1.resx">
+      <DependentUpon>201810130633082_13102018empty1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810130724486_ReviewEdit.resx">
+      <DependentUpon>201810130724486_ReviewEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810130900359_13102010empty2.resx">
+      <DependentUpon>201810130900359_13102010empty2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810130917342_13102010empty3.resx">
+      <DependentUpon>201810130917342_13102010empty3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810131031291_an131018.resx">
+      <DependentUpon>201810131031291_an131018.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810131203568_BookEdit123.resx">
+      <DependentUpon>201810131203568_BookEdit123.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810150522169_BookingChanged1.resx">
+      <DependentUpon>201810150522169_BookingChanged1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810150547291_BookingChanged2.resx">
+      <DependentUpon>201810150547291_BookingChanged2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810150551073_ShopChanged.resx">
+      <DependentUpon>201810150551073_ShopChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810151227301_bookingDetShop.resx">
+      <DependentUpon>201810151227301_bookingDetShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810200959204_shopPreference.resx">
+      <DependentUpon>201810200959204_shopPreference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810221416473_OdderIdInItem.resx">
+      <DependentUpon>201810221416473_OdderIdInItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810221440218_Offer%25.resx">
+      <DependentUpon>201810221440218_Offer%25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810241019112_EmployeeCreated.resx">
+      <DependentUpon>201810241019112_EmployeeCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810260828070_DeviceTbk.resx">
+      <DependentUpon>201810260828070_DeviceTbk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810301908476_PromoOffer.resx">
+      <DependentUpon>201810301908476_PromoOffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810310647490_userchangecreated.resx">
+      <DependentUpon>201810310647490_userchangecreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811020610279_CustomerCreated.resx">
+      <DependentUpon>201811020610279_CustomerCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811020630077_changescreated.resx">
+      <DependentUpon>201811020630077_changescreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811020721377_changescreated12.resx">
+      <DependentUpon>201811020721377_changescreated12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811030624301_count.resx">
+      <DependentUpon>201811030624301_count.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811030704447_Statusinbooking.resx">
+      <DependentUpon>201811030704447_Statusinbooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811030732137_CustomerInBookind.resx">
+      <DependentUpon>201811030732137_CustomerInBookind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811061731138_CustomerOffers.resx">
+      <DependentUpon>201811061731138_CustomerOffers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811061842094_CustomerOffersBook.resx">
+      <DependentUpon>201811061842094_CustomerOffersBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811061938063_NewBookFields.resx">
+      <DependentUpon>201811061938063_NewBookFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811101052581_sharetext.resx">
+      <DependentUpon>201811101052581_sharetext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811101116291_Status.resx">
+      <DependentUpon>201811101116291_Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811110742049_shopno.resx">
+      <DependentUpon>201811110742049_shopno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811140653378_shopchange.resx">
+      <DependentUpon>201811140653378_shopchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811151005035_ItemChanged1.resx">
+      <DependentUpon>201811151005035_ItemChanged1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811150554572_BookingNewVals.resx">
+      <DependentUpon>201811150554572_BookingNewVals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811151309563_testtemp.resx">
+      <DependentUpon>201811151309563_testtemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811160613538_OfferIsPer.resx">
+      <DependentUpon>201811160613538_OfferIsPer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811160944369_CancelRemarks.resx">
+      <DependentUpon>201811160944369_CancelRemarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811170243501_Address.resx">
+      <DependentUpon>201811170243501_Address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811170313509_Address2.resx">
+      <DependentUpon>201811170313509_Address2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811170923100_ItemPreference.resx">
+      <DependentUpon>201811170923100_ItemPreference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811200536180_statusinBooking2.resx">
+      <DependentUpon>201811200536180_statusinBooking2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811200613217_CancelRemarks1.resx">
+      <DependentUpon>201811200613217_CancelRemarks1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811271731011_maxvaluepromo.resx">
+      <DependentUpon>201811271731011_maxvaluepromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811271909483_Order.resx">
+      <DependentUpon>201811271909483_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811300951581_MobileNo3Shop.resx">
+      <DependentUpon>201811300951581_MobileNo3Shop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812080925512_changed.resx">
+      <DependentUpon>201812080925512_changed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812090844541_PriorityItemCat.resx">
+      <DependentUpon>201812090844541_PriorityItemCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812100722536_IsPaidBooking.resx">
+      <DependentUpon>201812100722536_IsPaidBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812110453157_CommissionPercentage.resx">
+      <DependentUpon>201812110453157_CommissionPercentage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812110513374_BookingPoints.resx">
+      <DependentUpon>201812110513374_BookingPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812180518559_CusWalletBooking.resx">
+      <DependentUpon>201812180518559_CusWalletBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812180920207_Reports.resx">
+      <DependentUpon>201812180920207_Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812201021448_WalletLimit.resx">
+      <DependentUpon>201812201021448_WalletLimit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901080759027_empInBooking.resx">
+      <DependentUpon>201901080759027_empInBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901181220092_MEDCreated.resx">
+      <DependentUpon>201901181220092_MEDCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901181239531_MEDBookingUploadCreated.resx">
+      <DependentUpon>201901181239531_MEDBookingUploadCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901210507441_ItemChanged2.resx">
+      <DependentUpon>201901210507441_ItemChanged2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901200819167_mededit.resx">
+      <DependentUpon>201901200819167_mededit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901210603078_empty21-1-2018.resx">
+      <DependentUpon>201901210603078_empty21-1-2018.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901210636424_locupModified.resx">
+      <DependentUpon>201901210636424_locupModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901210753445_empty21012019.resx">
+      <DependentUpon>201901210753445_empty21012019.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901210915517_MEDBrandCreated.resx">
+      <DependentUpon>201901210915517_MEDBrandCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901210931008_AddMEDBrandItemCreated.resx">
+      <DependentUpon>201901210931008_AddMEDBrandItemCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901210801117_empty9870.resx">
+      <DependentUpon>201901210801117_empty9870.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901210950292_21012019Created.resx">
+      <DependentUpon>201901210950292_21012019Created.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901211111195_21012019Changed.resx">
+      <DependentUpon>201901211111195_21012019Changed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901220529530_MEDUploadChanged.resx">
+      <DependentUpon>201901220529530_MEDUploadChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901281953433_MEDShop.resx">
+      <DependentUpon>201901281953433_MEDShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902041204014_CompanyExpense.resx">
+      <DependentUpon>201902041204014_CompanyExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902050827238_PaymentMode.resx">
+      <DependentUpon>201902050827238_PaymentMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902061023037_ExpenseMaster.resx">
+      <DependentUpon>201902061023037_ExpenseMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903070738337_MMethodAdded.resx">
+      <DependentUpon>201903070738337_MMethodAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903070946181_CustomerMMethodAdded.resx">
+      <DependentUpon>201903070946181_CustomerMMethodAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903091046523_MedShopUser.resx">
+      <DependentUpon>201903091046523_MedShopUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903091254514_MEDShopInBookingDetail.resx">
+      <DependentUpon>201903091254514_MEDShopInBookingDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904040606580_uploadmoreimgs.resx">
+      <DependentUpon>201904040606580_uploadmoreimgs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904170638496_LocationIntegrationShop.resx">
+      <DependentUpon>201904170638496_LocationIntegrationShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904171107343_NewDatesInBooking.resx">
+      <DependentUpon>201904171107343_NewDatesInBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904171141391_NewDatesInMEDBooking.resx">
+      <DependentUpon>201904171141391_NewDatesInMEDBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904250743354_DateTable.resx">
+      <DependentUpon>201904250743354_DateTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905121653028_blacklist.resx">
+      <DependentUpon>201905121653028_blacklist.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

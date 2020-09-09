@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eahara.Web", "Eahara.Web\Eahara.Web.csproj", "{1C4B6E48-5286-498D-8119-F94104983379}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eahara.Model", "Eahara.Model\Eahara.Model.csproj", "{23F529BE-521C-4B6C-9F08-DE2B2DFBCC34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eahara.BL", "Eahara.BL\Eahara.BL.csproj", "{0F4A6445-5A96-441F-B668-3D804D248D29}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Eahara-Web", "http://localhost:51957", "{8E3A7093-7624-49FC-AA4C-97F57803BD06}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51957"
+		Debug.AspNetCompiler.PhysicalPath = "..\Eahara-Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51957\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51957"
+		Release.AspNetCompiler.PhysicalPath = "..\Eahara-Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51957\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\Eahara-Web\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Eahara-admin(1)", "http://localhost:50146", "{CD4E8677-8888-4132-89BC-058165B4DED0}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50146"
+		Debug.AspNetCompiler.PhysicalPath = "..\Eahara-admin\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50146\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50146"
+		Release.AspNetCompiler.PhysicalPath = "..\Eahara-admin\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50146\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\Eahara-admin\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C4B6E48-5286-498D-8119-F94104983379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C4B6E48-5286-498D-8119-F94104983379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C4B6E48-5286-498D-8119-F94104983379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C4B6E48-5286-498D-8119-F94104983379}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23F529BE-521C-4B6C-9F08-DE2B2DFBCC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F529BE-521C-4B6C-9F08-DE2B2DFBCC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F529BE-521C-4B6C-9F08-DE2B2DFBCC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F529BE-521C-4B6C-9F08-DE2B2DFBCC34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F4A6445-5A96-441F-B668-3D804D248D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F4A6445-5A96-441F-B668-3D804D248D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F4A6445-5A96-441F-B668-3D804D248D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F4A6445-5A96-441F-B668-3D804D248D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E3A7093-7624-49FC-AA4C-97F57803BD06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E3A7093-7624-49FC-AA4C-97F57803BD06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E3A7093-7624-49FC-AA4C-97F57803BD06}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E3A7093-7624-49FC-AA4C-97F57803BD06}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{CD4E8677-8888-4132-89BC-058165B4DED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4E8677-8888-4132-89BC-058165B4DED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD4E8677-8888-4132-89BC-058165B4DED0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4E8677-8888-4132-89BC-058165B4DED0}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {362AF1C5-EBD0-4BB7-8FD4-6E2E5F07B9A7}
+	EndGlobalSection
+EndGlobal
