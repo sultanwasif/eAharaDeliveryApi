@@ -170,7 +170,7 @@ namespace Eahara.Web.Controllers
                                 MessageController messagectrl = new MessageController();
                                 NotificationController Notictrl = new NotificationController();
 
-                                string msg = "Order No " + addData.RefNo + " has been placed by customer " + addData.Name + " Thanks for using Eahara. Issues? Call us on " + cp.MobileNo + "  or " + cp.WhatsappNo;
+                                string msg = "Order No " + addData.RefNo + " has been placed by customer " + addData.Name + " Thanks for using eAHARA. Issues? Call us on " + cp.MobileNo + "  or " + cp.WhatsappNo + " -EAHARA";
 
                                 messagectrl.sendSMS(msg, shop.MobileNo);
 

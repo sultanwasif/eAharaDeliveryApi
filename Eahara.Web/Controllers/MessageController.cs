@@ -31,8 +31,10 @@ namespace Eahara.Web.Controllers
             {
                 var cp = context.CompanyProfiles.FirstOrDefault();
 
-                string myParameters = "User=" + "eahara" + "&passwd= " + "bindas1234" + "&mobilenumber=" + temp + "&message=" + msg + "&sid=" + cp.SMSID + "&mtype=N&DR=Y";
+                string myParameters = "user=" + "eahara" + "&passwd= " + "bindas1234" + "&mobilenumber=" + temp + "&message=" + msg + "&sid=" + cp.SMSID + "&mtype=N&DR=Y";
                 string URI = "http://api.smscountry.com/SMSCwebservice_bulk.aspx?";
+                //string myParameters = "user=" + "sultan" + "&password= " + "5HT4R37G" + "&msisdn=" + temp + "&sid=" + "eAHARA" + "&msg=" + msg + "&fl=0&gwid=2";
+                //string URI = "http://sms.planetweb.co.in/vendorsms/pushsms.aspx?";
                 using (WebClient sms = new WebClient())
                 {
                     sms.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
